@@ -1,0 +1,49 @@
+{% extends 'bezoeker.html.twig' %}
+{% block menu %}
+    <li><a href="{{ path('homepage') }}">home</a></li>
+    <li><a href="{{ path('kartactiviteiten') }}">aanbod</a></li>
+    <li><a href="{{ path('registreren') }}">registreren</a></li>
+    <li><a href="#">contact</a></li>
+{% endblock %}
+{% block content %}
+    <section >
+        <article>
+            <h3>Activiteit bekijken</h3>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>id</th>
+                        <th>Naam</th>
+                        <th>Min. leeftijd</th>
+                        <th>Tijdsduur</th>
+                        <th>Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>{{ activiteit.id }}</th>
+                            <th>{{ activiteit.naam }}</th>
+                            <th>{{ activiteit.minleeftijd }} jaar</th>
+                            <th>{{ activiteit.tijdsduur }} min.</th>
+                            <th>€ {{ activiteit.prijs }}</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+{#            <ul class="list-group">#}
+
+
+{#                    <li class="list-group-item text-primary">{{ activiteit.id }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.naam }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.minleeftijd }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.tijdsduur }}</li>#}
+{#                    <li class="list-group-item text-primary">{{ activiteit.prijs }}</li>#}
+
+{#            </ul>#}
+        </article>
+        <figure>
+{#            <img class="img-responsive center-block" style="width:30%"src={{ asset('img/kart.jpg') }} alt="kart" />#}
+        </figure>
+    </section>
+{% endblock %}
